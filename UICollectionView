@@ -1,0 +1,27 @@
+import UIKit
+
+import hkAlium
+
+
+
+class ViewController: UICollectionViewController, CustomLayoutDelegate {
+
+
+
+    func collectionView(_ collectionView: UICollectionView,
+
+                        heightForItemAt
+
+                        indexPath: IndexPath,
+
+                        with width: CGFloat) -> CGFloat {
+
+        
+
+        let heightSizes = [100,216]
+
+        return CGFloat(heightSizes[dataSet[indexPath.row].isBig ? 1 : 0])
+
+    }
+
+}
